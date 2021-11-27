@@ -17,12 +17,12 @@ const NavBarUser = styled.div`
 `;
 
 function NavBar({ logoImg, logoText, user }) {
-    return (
-        <NavBarWrapper>
-            <NavBarLogo>{logoImg} {logoText}</NavBarLogo>
-            <NavBarUser>Logged in as: {user}</NavBarUser>
-        </NavBarWrapper>
-    );
+  return (
+    <NavBarWrapper>
+      <NavBarLogo>{logoImg} {logoText}</NavBarLogo>
+      <NavBarUser>Logged in as: {user}</NavBarUser>
+    </NavBarWrapper>
+  );
 }
 
 export default NavBar;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import NextBtn from '../NextBtn/NextBtn';
+import NextBtn from '../../Components/NextBtn/NextBtn';
 import BackBtn from '../../Components/BackBtn/BackBtn';
 
 const ButtonsWrapper = styled.div`

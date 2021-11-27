@@ -1,11 +1,12 @@
 import './App.css';
-import Rectangle from './Containers/Rectangle/Rectangle';
-
+import MainView from './Containers/MainView/MainView';
+import NavBar from './Containers/NavBar/NavBar';
 
 function App() {
   return (
     <div className="App">
-        <Rectangle />
+        <NavBar />
+        <MainView />
     </div>
   );
 }

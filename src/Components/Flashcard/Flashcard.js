@@ -14,10 +14,11 @@ const Card = styled.div`
     margin: 10px auto;
 `
 
-const Flashcard = () => {
+const Flashcard = ({ flashcard }) => {
     return(
     <Card>
-        Main Flashcard
+        <h1>{flashcard?.question}</h1>
+        <p>{flashcard?.answer}</p>
     </Card>
     )
 

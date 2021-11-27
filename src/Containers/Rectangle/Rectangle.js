@@ -1,31 +1,19 @@
+import GlobalColors from '../../theme/colors'
 import styled from 'styled-components'
 
 import Flashcard from "../Flashcard/Flashcard";
-import NextBtn from "../NextBtn/NextBtn";
-import BackBtn from "../BackBtn/BackBtn";
+import Buttons from '../Buttons/Buttons';
 
 const MainView = styled.div`
     width: 100vw;
     height: 100Vh;
-    background-color: #282C34;
+    background-color: ${GlobalColors.darkGray};
 `;
-
-const Buttons = styled.div`
-display: flex;
-justify-content: center
-
-
-`;
-
-
 
 const Rectangle = () => {
     return(
         <MainView>
-            <Buttons>
-                <BackBtn />
-                <NextBtn />
-            </Buttons>
+            <Buttons />
             <Flashcard />
         </MainView>
     )

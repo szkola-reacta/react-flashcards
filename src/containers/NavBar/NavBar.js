@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import SignIn from '../SignIn';
+
 const NavBarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,11 +18,12 @@ const NavBarUser = styled.div`
   margin-right: 3vw;
 `;
 
-function NavBar({ logoImg, logoText, user }) {
+function NavBar({ logoImg, logoText, userName }) {
     return (
         <NavBarWrapper>
             <NavBarLogo>{logoImg} {logoText}</NavBarLogo>
-            <NavBarUser>Logged in as: {user}</NavBarUser>
+            <SignIn />
+            <NavBarUser>Logged in as: {userName}</NavBarUser>
         </NavBarWrapper>
     );
 }

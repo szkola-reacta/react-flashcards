@@ -5,8 +5,8 @@ import NavBar from './Containers/NavBar/NavBar';
 function App() {
   return (
     <div className="App">
-        <NavBar />
-        <MainView />
+      <NavBar logoImg={process.env.PUBLIC_URL + "/logo192.png"} logoText="React-Flashcards" />
+      <MainView />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components';
 import GlobalColors from '../../theme/colors';
 
-import SignInBtn from '../../Components/SignInBtn/SignInBtn';
+import LogBtn from '../../Components/LogBtn/LogBtn';
 
 
 const NavBarWrapper = styled.div`
@@ -49,7 +49,12 @@ const IconContainer = styled.div`
   cursor: pointer;
 `
 
-function NavBar({ logoImg, logoText, user }) {
+const LoggedUser = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+function NavBar({ user }) {
   const menuIcon = <FontAwesomeIcon icon={faBars} />
 
   return (
@@ -59,7 +64,7 @@ function NavBar({ logoImg, logoText, user }) {
         <LogoText>React-Flashcards</LogoText>
       </NavBarLogo>
       <NavBarRight>
-        {user ? `Logged in as: ${user}` : <SignInBtn />}
+        {user ? <LoggedUser>{`Logged in as: ${user}`} <LogBtn label="Log out" /> </LoggedUser> : <LogBtn label="Sign in" />}
         <IconContainer>{menuIcon}</IconContainer>
       </NavBarRight>
 

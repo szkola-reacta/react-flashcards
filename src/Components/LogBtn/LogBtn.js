@@ -11,12 +11,12 @@ const Button = styled.div`
     cursor: pointer;
 `;
 
-const SignInBtn = () => {
+const LogBtn = ({ label }) => {
     return (
         <Button>
-            Sign in
+            {label}
         </Button>
     )
 }
 
-export default SignInBtn;
+export default LogBtn;

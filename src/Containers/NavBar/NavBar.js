@@ -2,7 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import styled from 'styled-components';
-import GlobalColors from '../../theme/colors'
+import GlobalColors from '../../theme/colors';
+
+import SignInBtn from '../../Components/SignInBtn/SignInBtn';
+
 
 const NavBarWrapper = styled.div`
   display: flex;
@@ -56,7 +59,7 @@ function NavBar({ logoImg, logoText, user }) {
         <LogoText>React-Flashcards</LogoText>
       </NavBarLogo>
       <NavBarRight>
-        {user ? `Logged in as: ${user}` : "Login button"}
+        {user ? `Logged in as: ${user}` : <SignInBtn />}
         <IconContainer>{menuIcon}</IconContainer>
       </NavBarRight>
 

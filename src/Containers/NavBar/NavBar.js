@@ -8,7 +8,7 @@ const NavBarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5vh;
+  height: 6vh;
   background-color: ${GlobalColors.secondary};
   border: 2px solid ${GlobalColors.primary};
 `;
@@ -31,6 +31,12 @@ const LogoImg = styled.img`
   margin-right: 2vw;
 `
 
+const LogoText = styled.span`
+  color: ${GlobalColors.darkGray};
+  font-family: 'Francois One', sans-serif;
+  font-size: 1.3rem;
+`
+
 const IconContainer = styled.div`
   margin-left: 3vw;
   margin-left: 3vw;
@@ -45,7 +51,10 @@ function NavBar({ logoImg, logoText, user }) {
 
   return (
     <NavBarWrapper>
-      <NavBarLogo><LogoImg src={logoImg} alt="react-logo" /> {logoText}</NavBarLogo>
+      <NavBarLogo>
+        <LogoImg src={process.env.PUBLIC_URL + "/logo192.png"} alt="react-logo" />
+        <LogoText>React-Flashcards</LogoText>
+      </NavBarLogo>
       <NavBarRight>
         {user ? `Logged in as: ${user}` : "Login button"}
         <IconContainer>{menuIcon}</IconContainer>

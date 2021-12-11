@@ -45,13 +45,21 @@ const Content = styled.div`
 
 const Drawer = ({ children }) => {
     const [ expanded, setExpanded ] = useState(false);
+    const [ hoovering, setHoovering ] = useState(false);
 
     const handleChevronClick = () => {
         setExpanded((prev) => !prev);
     };
 
+    const onContainerEnter = () => {
+        setHoovering(true);
+    };
+    const onContainerLeave = () => {
+        setHoovering(false);
+    };
+
     return (
-        <Container expanded={expanded}>
+        <Container expanded={expanded || hoovering} onPointerEnter={onContainerEnter} onPointerLeave={onContainerLeave}>
             <DrawerResizeLine />
             <Chevron onClick={handleChevronClick}>{expanded ? '>' : '<'}</Chevron>
             <Content>{children}</Content>

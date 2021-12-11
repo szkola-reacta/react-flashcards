@@ -22,6 +22,7 @@ const Container = styled.div`
 const DrawerResizeLine = styled.div`
     width: 2px;
     background: ${border};
+    margin-right: 8px;
 `;
 
 const Chevron = styled.button`
@@ -41,6 +42,7 @@ const Chevron = styled.button`
 const Content = styled.div`
     padding: 16px;
     color: ${textColor};
+    width: 100%;
 `;
 
 const Drawer = ({ children }) => {
@@ -59,10 +61,12 @@ const Drawer = ({ children }) => {
     };
 
     return (
-        <Container expanded={expanded || hoovering} onPointerEnter={onContainerEnter} onPointerLeave={onContainerLeave}>
+        <Container expanded={expanded || hoovering}>
             <DrawerResizeLine />
             <Chevron onClick={handleChevronClick}>{expanded ? '>' : '<'}</Chevron>
-            <Content>{children}</Content>
+            <Content onPointerEnter={onContainerEnter} onPointerLeave={onContainerLeave}>
+                {children}
+            </Content>
         </Container>
     );
 };

@@ -1,48 +1,50 @@
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
-
-const textColor = 'white';
-const backgroundColor = '#16191d';
-const border = '#61DAFB';
+import GlobalColors from '../../theme/colors';
 
 const Container = styled.div`
-    margin-top: calc(5vh + 6px);
-    height: 100%;
     display: flex;
     position: absolute;
-    width: 300px;
     left: calc(100% - 300px);
     top: 0;
-    background-color: ${backgroundColor};
-    transform: translateX(280px);
-    transition: transform 150ms ease-in-out;
+    height: 100%;
+    width: 300px;
+    margin-top: calc(5vh + 6px);
+    background-color: ${GlobalColors.bgDark};
+    transform: translateX(270px);
+    transition: transform 150ms ease;
     ${(props) => props.expanded && css`transform: translateX(0px);`};
 `;
 
 const DrawerResizeLine = styled.div`
+    position: relative;
+    left: -4px;
     width: 2px;
-    background: ${border};
-    margin-right: 8px;
+    background: ${GlobalColors.primary};
+    margin: 0 8px;
 `;
 
 const Chevron = styled.button`
+    position: absolute;
+    left: -12px;
     width: 32px;
+    top: 100px;
     height: 32px;
     background: white;
-    border: 2px solid ${border};
-    color: ${backgroundColor};
+    border: 2px solid ${GlobalColors.primary};
+    color: ${GlobalColors.bgDark};
     font-weight: 700;
-    position: absolute;
-    left: -15px;
-    top: 100px;
     border-radius: 50%;
+    opacity: ${(props) => (props.show ? '1' : '0')};
+    ${(props) => props.expanded && css`transform: rotate(180deg);`};
+    transition: all 150ms ease;
 }
 `;
 
 const Content = styled.div`
-    padding: 16px;
-    color: ${textColor};
     width: 100%;
+    padding: 16px;
+    color: ${GlobalColors.contrastText};
 `;
 
 const Drawer = ({ children }) => {
@@ -61,12 +63,12 @@ const Drawer = ({ children }) => {
     };
 
     return (
-        <Container expanded={expanded || hoovering}>
+        <Container onPointerEnter={onContainerEnter} onPointerLeave={onContainerLeave} expanded={expanded || hoovering}>
             <DrawerResizeLine />
-            <Chevron onClick={handleChevronClick}>{expanded ? '>' : '<'}</Chevron>
-            <Content onPointerEnter={onContainerEnter} onPointerLeave={onContainerLeave}>
-                {children}
-            </Content>
+            <Chevron expanded={expanded} show={!(expanded && !hoovering)} onClick={handleChevronClick}>
+                {'<'}
+            </Chevron>
+            <Content>{children}</Content>
         </Container>
     );
 };

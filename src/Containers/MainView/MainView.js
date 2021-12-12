@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-import { getRandomFlashcard } from  '../../UTILS/Firebase/firestore';
+import { getRandomFlashcard } from '../../UTILS/Firebase/firestore';
 import GlobalColors from '../../theme/colors'
 import Buttons from '../Buttons/Buttons';
-import Flashcard from '../../Components/Flashcard/Flashcard'
+import Flashcard from '../../Components/Flashcard/Flashcard';
+import NavBar from '../NavBar/NavBar';
 
 const View = styled.div`
     width: 100vw;
@@ -13,7 +14,7 @@ const View = styled.div`
 `;
 
 const MainView = () => {
-    const [flashcard, setFlashcard ] = useState();
+    const [flashcard, setFlashcard] = useState();
     useEffect(() => {
         const getFlashcard = async () => {
             const result = await getRandomFlashcard();
@@ -23,10 +24,11 @@ const MainView = () => {
         }
         getFlashcard();
     }, []);
-    return(
+    return (
         <View>
+            <NavBar />
             <Buttons />
-            <Flashcard flashcard={flashcard}/>
+            <Flashcard flashcard={flashcard} />
         </View>
     )
 }

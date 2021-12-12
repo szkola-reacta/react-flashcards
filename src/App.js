@@ -1,12 +1,29 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
 import './App.css';
 import MainView from './Containers/MainView/MainView';
-import NavBar from './Containers/NavBar/NavBar';
+import SignInView from './Containers/SignInView/SignInView';
+import WelcomeView from './Containers/WelcomeView/WelcomeView';
+import RequireAuth from "./Components/RequireAuth/RequireAuth";
 
 function App() {
   return (
     <div className="App">
-        <NavBar />
-        <MainView />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/react-flashcards/app" element={
+            <RequireAuth>
+              <MainView />
+            </RequireAuth>
+          } />
+          <Route path="/react-flashcards/sign-in" element={<SignInView />} />
+          <Route path="/react-flashcards/" element={<WelcomeView />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

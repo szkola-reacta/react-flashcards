@@ -84,7 +84,6 @@ const Drawer = ({ children }) => {
     };
 
     const handleMouseDown = (e) => {
-        // if (!expanded) return;
         document.addEventListener('mouseup', handleMouseUp, true);
         document.addEventListener('mousemove', handleMouseMove, true);
     };

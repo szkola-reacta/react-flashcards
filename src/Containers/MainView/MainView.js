@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { getRandomFlashcard } from '../../services/FirestoreService';
 import GlobalColors from '../../theme/colors'
 import Buttons from '../Buttons/Buttons';
-import Flashcard from '../../Components/Flashcard/Flashcard'
+import Flashcard from '../../components/Flashcard/Flashcard'
 
 const View = styled.div`
     width: 100vw;

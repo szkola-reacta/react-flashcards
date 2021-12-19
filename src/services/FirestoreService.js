@@ -3,8 +3,8 @@ import { getRandomInt } from '../utils/helpers';
 
 import { db } from './firebase';
 
-const flashcardStartId = 1;
-const flashcardsCollectionName = 'flashcards';
+const FLASHCARD_START_ID = 1;
+const FLASHCARDS_COLLECTION_NAME = 'flashcards';
 
 const getFlashcardById = async (id) => {
     const flashcardCollection = collection(db, 'flashcards');
@@ -19,11 +19,11 @@ const getFlashcardById = async (id) => {
 };
 
 export const getRandomFlashcard = async () => {
-    const flashcardCollection = collection(db, flashcardsCollectionName);
+    const flashcardCollection = collection(db, FLASHCARDS_COLLECTION_NAME);
     const flashcardSnapshot = await getDocs(flashcardCollection);
 
     const flashcardListLength = flashcardSnapshot.docs.length;
-    const randomIndex = getRandomInt(flashcardStartId, flashcardListLength);
+    const randomIndex = getRandomInt(FLASHCARD_START_ID, flashcardListLength);
 
     try {
         const querySnapshot = await getFlashcardById(randomIndex);

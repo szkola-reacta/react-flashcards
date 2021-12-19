@@ -1,6 +1,6 @@
 import './App.css';
-import MainView from './Containers/MainView/MainView';
-import NavBar from './Containers/NavBar/NavBar';
+import MainView from './containers/MainView/MainView';
+import NavBar from './containers/NavBar/NavBar';
 import useAuthListener from './hooks/useAuthListener';
 import AuthContext from './context/AuthContext';
 

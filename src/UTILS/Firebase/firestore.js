@@ -9,7 +9,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const getFlashcardById = async (id) => {
-	const flashcardCollection = collection(db, 'flashcards');
+	const flashcardCollection = collection(db, flashcardsCollectionName);
 	const queryFlashcardById = query(flashcardCollection, where('id', '==', id));
 
 	try {

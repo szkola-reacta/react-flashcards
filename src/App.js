@@ -5,8 +5,8 @@ import NavBar from './Containers/NavBar/NavBar';
 function App() {
   return (
     <div className="App">
-        <NavBar />
-        <MainView />
+      <NavBar />
+      <MainView />
     </div>
   );
 }

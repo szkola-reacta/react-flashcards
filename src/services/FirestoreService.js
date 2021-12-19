@@ -1,5 +1,5 @@
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { getRandomInt } from '../UTILS/helpers';
+import { getRandomInt } from '../utils/helpers';
 
 import { db } from './firebase';
 

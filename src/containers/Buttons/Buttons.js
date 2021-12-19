@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import NextBtn from '../../_components/NextBtn/NextBtn';
-import BackBtn from '../../_components/BackBtn/BackBtn';
+import NextBtn from '../../components/NextBtn/NextBtn';
+import BackBtn from '../../components/BackBtn/BackBtn';
 
 const ButtonsWrapper = styled.div`
 display: flex;

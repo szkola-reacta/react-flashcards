@@ -5,13 +5,14 @@ import styled from 'styled-components';
 import GlobalColors from '../../theme/colors';
 import AuthContext from '../../context/AuthContext';
 import { logOut } from '../../services/FirebaseAuthService';
+import logo from '../../logo.png';
 
 export default function NavBar() {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const navigateToWelcomeView = () => {
-        navigate('/react-flashcards');
+        navigate('/');
     }
 
     const navigateToSignInView = () => {
@@ -21,7 +22,7 @@ export default function NavBar() {
     return (
         <NavBar.Wrapper>
             <NavBar.Logo onClick={navigateToWelcomeView}>
-                <img src="./react-flashcards/logo192.png" alt="logo"/>
+                <img src={logo} alt="logo"/>
                 React Flashcards
             </NavBar.Logo>
             <NavBar.Actions>

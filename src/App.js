@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
 import './App.css';
@@ -19,13 +19,12 @@ function App() {
     return (
         <AppView className="App">
             <AuthContext.Provider value={{ user }}>
-                <BrowserRouter>
+                <BrowserRouter basename="/react-flashcards">
                     <NavBar />
                     <Routes>
-                        <Route path="/react-flashcards" element={<WelcomeView />} />
+                        <Route path="/" element={<WelcomeView />} />
                         <Route path="/sign-in" element={<SignInView />} />
                         <Route path="/app" element={<RequireAuth><MainView /></RequireAuth>} />
-                        <Route exact path="/" element={<Navigate to="/react-flashcards" />} />
                         <Route path="*" element={<NotFoundView />} />
                     </Routes>
                 </BrowserRouter>

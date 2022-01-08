@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { getRandomFlashcard } from '../../services/FirestoreService';
 import MainLayout from '../../layouts/MainLayout';
-import NavButtons from '../../containers/NavButtons';
+import FlashcardButtons from '../../containers/FlashcardButtons';
 import Flashcard from '../../components/Flashcard'
 
 export default function MainView() {
@@ -21,7 +21,7 @@ export default function MainView() {
     return(
         <MainLayout>
             <MainView.Content>
-                <NavButtons />
+                <FlashcardButtons />
                 <Flashcard flashcard={flashcard}/>
             </MainView.Content>
         </MainLayout>

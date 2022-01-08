@@ -5,7 +5,9 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import NavButton from '../../components/NavButton';
 
 export default function FlashcardButtons() {
+    // eslint-disable-next-line no-console
     const goBack = () => console.log('Back button clicked');
+    // eslint-disable-next-line no-console
     const getNextFlashcard = () => console.log('Next button clicked');
 
     return (

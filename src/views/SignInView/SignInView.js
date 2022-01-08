@@ -17,6 +17,7 @@ export default function SignInView() {
         try {
             await logInWithGithub();
         } catch (error) {
+            // eslint-disable-next-line no-console
             console.error('Failed to log in', error);
         }
     };

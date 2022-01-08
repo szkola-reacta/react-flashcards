@@ -8,7 +8,7 @@ export default function useAuthListener() {
     const [user, setUser] = useState(savedUser);
 
     useEffect(() => {
-        const listener = onAuthStateChanged(auth, authUser => {
+        const listener = onAuthStateChanged(auth, (authUser) => {
             if (authUser) {
                 localStorage.setItem('authUser', JSON.stringify(authUser));
                 setUser(authUser);

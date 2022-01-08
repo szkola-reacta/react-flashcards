@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-flashcards/static/css/main.a617e044.chunk.css",
+    "main.js": "/react-flashcards/static/js/main.cde78c1f.chunk.js",
+    "main.js.map": "/react-flashcards/static/js/main.cde78c1f.chunk.js.map",
+    "runtime-main.js": "/react-flashcards/static/js/runtime-main.33616c32.js",
+    "runtime-main.js.map": "/react-flashcards/static/js/runtime-main.33616c32.js.map",
+    "static/js/2.30e8417f.chunk.js": "/react-flashcards/static/js/2.30e8417f.chunk.js",
+    "static/js/2.30e8417f.chunk.js.map": "/react-flashcards/static/js/2.30e8417f.chunk.js.map",
+    "static/js/3.dc7eead5.chunk.js": "/react-flashcards/static/js/3.dc7eead5.chunk.js",
+    "static/js/3.dc7eead5.chunk.js.map": "/react-flashcards/static/js/3.dc7eead5.chunk.js.map",
+    "index.html": "/react-flashcards/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/react-flashcards/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.30e8417f.chunk.js.LICENSE.txt": "/react-flashcards/static/js/2.30e8417f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33616c32.js",
+    "static/js/2.30e8417f.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.cde78c1f.chunk.js"
+  ]
+}

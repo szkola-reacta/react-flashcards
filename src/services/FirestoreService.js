@@ -18,7 +18,6 @@ const getFlashcardById = async (id) => {
     }
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export const getRandomFlashcard = async () => {
     const flashcardCollection = collection(db, FLASHCARDS_COLLECTION_NAME);
     const flashcardSnapshot = await getDocs(flashcardCollection);

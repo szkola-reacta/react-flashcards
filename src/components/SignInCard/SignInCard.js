@@ -7,14 +7,10 @@ import GlobalColors from '../../theme/colors';
 export default function SignInCard({ onLogIn }) {
     return (
         <SignInCard.Wrapper>
-            <SignInCard.Text>
-                Sign in
-            </SignInCard.Text>
+            <SignInCard.Text>Sign in</SignInCard.Text>
             <SignInCard.Button onClick={onLogIn}>
-                <SignInCard.ProviderIcon icon={faGithub} size="2x"/>
-                <SignInCard.ButtonText>
-                    Sign in with Github
-                </SignInCard.ButtonText>
+                <SignInCard.ProviderIcon icon={faGithub} size="2x" />
+                <SignInCard.ButtonText>Sign in with Github</SignInCard.ButtonText>
             </SignInCard.Button>
         </SignInCard.Wrapper>
     );
@@ -26,7 +22,7 @@ SignInCard.Wrapper = styled.div`
     background-color: ${GlobalColors.secondary};
     border: 1px solid ${GlobalColors.primary};
     border-radius: 10px;
-    box-shadow: 8px 8px 16px 0px #000000E5;
+    box-shadow: 8px 8px 16px 0px #000000e5;
     display: flex;
     flex-direction: column;
     align-items: center;

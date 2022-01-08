@@ -24,7 +24,14 @@ function App() {
                     <Routes>
                         <Route path="/react-flashcards" element={<WelcomeView />} />
                         <Route path="/sign-in" element={<SignInView />} />
-                        <Route path="/app" element={<RequireAuth><MainView /></RequireAuth>} />
+                        <Route
+                            path="/app"
+                            element={
+                                <RequireAuth>
+                                    <MainView />
+                                </RequireAuth>
+                            }
+                        />
                         <Route exact path="/" element={<Navigate to="/react-flashcards" />} />
                         <Route path="*" element={<NotFoundView />} />
                     </Routes>

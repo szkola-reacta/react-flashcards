@@ -4,10 +4,10 @@ import GlobalColors from '../../theme/colors';
 
 export default function NavButton({ onClick, text, iconFirst, iconLast }) {
     return (
-        <NavButton.Wrapper onClick={ onClick }>
-            <NavButton.IconFirst>{ iconFirst }</NavButton.IconFirst>
-            <NavButton.Text>{ text }</NavButton.Text>
-            <NavButton.IconLast>{ iconLast }</NavButton.IconLast>
+        <NavButton.Wrapper onClick={onClick}>
+            <NavButton.IconFirst>{iconFirst}</NavButton.IconFirst>
+            <NavButton.Text>{text}</NavButton.Text>
+            <NavButton.IconLast>{iconLast}</NavButton.IconLast>
         </NavButton.Wrapper>
     );
 }
@@ -20,7 +20,7 @@ NavButton.Wrapper = styled.button`
     border: 2px solid ${GlobalColors.primary};
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 8px 8px 16px 0px #000000E5;
+    box-shadow: 8px 8px 16px 0px #000000e5;
     display: flex;
     align-items: center;
     justify-content: center;

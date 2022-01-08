@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-import { getRandomFlashcard } from '../../utils/Firebase/firestore';
+import { getRandomFlashcard } from '../../services/FirestoreService';
 import GlobalColors from '../../theme/colors'
 import Buttons from '../Buttons/Buttons';
 import Flashcard from '../../components/Flashcard/Flashcard'
